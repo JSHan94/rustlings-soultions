@@ -5,13 +5,11 @@
 // The goal is to make sure that the division does not fail to compile
 // and returns the proper type.
 
-// I AM NOT DONE
 
 fn average(values: &[f64]) -> f64 {
     let total = values.iter().sum::<f64>();
-    total / values.len()
+    total / (values.len() as f64)
 }
-
 fn main() {
     let values = [3.5, 0.3, 13.0, 11.7];
     println!("{}", average(&values));
